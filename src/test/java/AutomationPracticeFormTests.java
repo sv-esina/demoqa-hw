@@ -28,7 +28,7 @@ public class AutomationPracticeFormTests {
         $("#userEmail").setValue("monte@gmail.com");
 
         // выбор чек-бокса gender
-        $("[for='gender-radio-2']").click();
+        $("#genterWrapper").$(byText("Female")).click();
 
         //ввод номера телефона
         $("#userNumber").setValue("9991234567");
@@ -43,7 +43,7 @@ public class AutomationPracticeFormTests {
         $("#subjectsInput").setValue("Computer Science").pressEnter();
 
         //выбор хобби
-        $("[for='hobbies-checkbox-3']").click();
+        $("#hobbiesWrapper").$(byText("Music")).click();
 
         //загрузка картинки
         $("#uploadPicture").uploadFromClasspath("image1.png");
@@ -75,6 +75,5 @@ public class AutomationPracticeFormTests {
 
         //закрываем окно с таблицей
         $("#closeLargeModal").click();
-        sleep(3000);
     }
 }
