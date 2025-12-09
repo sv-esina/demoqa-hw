@@ -11,11 +11,9 @@ public class AutomationPracticeFormWithPageObjTests extends TestBase {
 
     @Test
     void successfulRegistrationTest(){
-        open("/automation-practice-form");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
 
         practiceFormPage.openPage()
+                .removeBanners()
                 .setFirstName("Svetlana")
                 .setLastName("Esina")
                 .setEmail("monte@gmail.com")
@@ -30,9 +28,7 @@ public class AutomationPracticeFormWithPageObjTests extends TestBase {
                 .setState("NCR")
                 .setCity("Delhi")
                 .clickSubmit()
-                .closeTable();
-
-        practiceFormPage.checkResultTable("Student Name", "Svetlana Esina")
+                .checkResultTable("Student Name", "Svetlana Esina")
                 .checkResultTable("Student Email", "monte@gmail.com")
                 .checkResultTable("Gender", "Female")
                 .checkResultTable("Mobile", "9991234567")
@@ -41,7 +37,7 @@ public class AutomationPracticeFormWithPageObjTests extends TestBase {
                 .checkResultTable("Hobbies", "Music")
                 .checkResultTable("Picture", "image1.png")
                 .checkResultTable("Address", "Some Address")
-                .checkResultTable("State and City", "NCR Delhi");
-
+                .checkResultTable("State and City", "NCR Delhi")
+                .closeTable();
     }
 }

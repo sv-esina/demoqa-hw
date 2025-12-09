@@ -18,7 +18,7 @@ public class PracticeFormPage {
             calendarInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
             hobbiesWrapper = $("#hobbiesWrapper"),
-            uploadPicture = $("uploadPicture"),
+            uploadPicture = $("#uploadPicture"),
             currentAddress = $("#currentAddress"),
             scroll = $("#stateCity-wrapper"),
             state = $("#state"),
@@ -33,10 +33,15 @@ public class PracticeFormPage {
     public PracticeFormPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
 
         return this;
+    }
+
+    public PracticeFormPage removeBanners() {
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+        return this;
+
     }
 
     public PracticeFormPage setFirstName(String value) {
