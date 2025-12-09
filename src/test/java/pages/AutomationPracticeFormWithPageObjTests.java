@@ -1,12 +1,7 @@
-package com.gmail.montesum;
+package pages;
 
 import org.junit.jupiter.api.Test;
-import pages.Components.TableResponsive;
-import pages.PracticeFormPage;
 
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AutomationPracticeFormWithPageObjTests extends TestBase {
@@ -26,7 +21,7 @@ public class AutomationPracticeFormWithPageObjTests extends TestBase {
                 .setEmail("monte@gmail.com")
                 .setGender("Female")
                 .setUserNumber("9991234567")
-                .setBirthDate("4", "December", "1990")
+                .setBirthDate("04", "December", "1990")
                 .setSubjects("Computer Science")
                 .setHobbies("Music")
                 .uploadPicture("image1.png")

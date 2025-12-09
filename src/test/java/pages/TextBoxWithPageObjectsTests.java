@@ -1,4 +1,4 @@
-package com.gmail.montesum;
+package pages;
 
 import org.junit.jupiter.api.Test;
 
