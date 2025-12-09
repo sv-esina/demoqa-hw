@@ -1,8 +1,8 @@
-package pages;
+package pages.tests;
 
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Selenide.*;
+import pages.PracticeFormPage;
+import pages.TestBase;
 
 public class AutomationPracticeFormWithPageObjTests extends TestBase {
 
