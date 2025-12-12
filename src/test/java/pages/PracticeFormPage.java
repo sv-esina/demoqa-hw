@@ -27,7 +27,7 @@ public class PracticeFormPage {
             submit = $("#submit"),
             closeTable = $("#closeLargeModal"),
             modalDialog = $(".modal-dialog");
-;
+
 
     CalendarComponent calendarComponent = new CalendarComponent();
     TableResponsive tableResponsive = new TableResponsive();
@@ -144,7 +144,6 @@ public class PracticeFormPage {
 
         return this;
     }
-
     public PracticeFormPage getModalDialog() {
         modalDialog.shouldNotBe(visible);
 
