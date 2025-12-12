@@ -5,6 +5,7 @@ import pages.components.CalendarComponent;
 import pages.components.TableResponsive;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
@@ -24,7 +25,8 @@ public class PracticeFormPage {
             state = $("#state"),
             city = $("#city"),
             submit = $("#submit"),
-            closeTable = $("#closeLargeModal");
+            closeTable = $("#closeLargeModal"),
+            modalDialog = $(".modal-dialog");
 ;
 
     CalendarComponent calendarComponent = new CalendarComponent();
@@ -139,6 +141,12 @@ public class PracticeFormPage {
 
     public PracticeFormPage closeTable() {
         closeTable.click();
+
+        return this;
+    }
+
+    public PracticeFormPage getModalDialog() {
+        modalDialog.shouldNotBe(visible);
 
         return this;
     }
