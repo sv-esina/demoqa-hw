@@ -1,8 +1,7 @@
-package pages.tests;
+package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.PracticeFormPage;
-import pages.TestBase;
 
 public class AutomationPracticeFormWithPageObjTests extends TestBase {
 
@@ -64,13 +63,15 @@ public class AutomationPracticeFormWithPageObjTests extends TestBase {
         // Проверка кол-ва символов в поле UserNumber (Mobile(10 Digits))
         practiceFormPage.openPage()
                 .removeBanners()
-                .setFirstName("Svetlana")
+                // оставляем пустым обязательное поле FirstName
+//                .setFirstName("Svetlana")
                 .setLastName("Esina")
                 .setGender("Female")
-                .setUserNumber("2334455")
+                .setUserNumber("9991234567")
                 .setBirthDate("04", "December", "1990")
                 .clickSubmit()
-                .checkResultTable("Student Name", "Svetlana Esina");
+                .getModalDialog();
+
     }
 }
 

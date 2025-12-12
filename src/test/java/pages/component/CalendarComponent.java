@@ -1,8 +1,5 @@
-package pages.Components;
+package pages.component;
 
-import pages.PracticeFormPage;
-
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {

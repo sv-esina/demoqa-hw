@@ -1,12 +1,12 @@
-package pages;
+package tests;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.Components.OutputTextBox;
+import pages.component.OutputTextBox;
 
 import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxPage {
-    private SelenideElement userName = $("#userName"),
+    private final SelenideElement userName = $("#userName"),
             userEmail = $("#userEmail"),
             currentAddress = $("#currentAddress"),
             permanentAddress = $("#permanentAddress"),
